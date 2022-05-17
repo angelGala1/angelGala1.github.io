@@ -1,0 +1,414 @@
+*body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /*es una psudoclase*/
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Permanent Marker', cursive;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+
+    overflow: hidden;
+    /*para todo lo que salga de este contenedor se oculte*/
+    margin: auto;
+    /*para centrar el contenido*/
+    padding: 60px 0;
+
+}
+
+/*HEADER*/
+
+.header {
+    height: 100vh;
+
+    background-image: linear-gradient(to top, #a18cd15f 0%, #fbc2eb68 100%), url(img/fondito.jpg);
+    /*se baja la transferencia que es el porcentaje  y luego se añade un fondito*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.head {
+    padding: 0;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.hamburguesa {
+    position: fixed;
+    /*es para que este fijo en toda la pagina aunque hagamos scrool*/
+    top: 30px;
+    right: 30px;
+    background: #fff;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgb(0, 0, 0.5);
+   /* z-index: 10;/*para que aparezca sobre algo*/
+}
+
+.menu-navegacion {
+    position: fixed;
+    background-image: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+    right: 10px;
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    /*lo reparta equitativamente*/
+    transition: transform .3s ease-in-out;
+    transform: translate(110%);
+    /*con esto ocultamos la barra de navegacion*/
+
+    box-shadow: 0 0 6px rgb(0, 0, 0.5);
+
+}
+
+/*clase nueva spread*/
+.spread {
+    transform: translate(0);
+}
+
+.menu-navegacion {
+    color: #fff;
+    text-decoration: none;
+}
+
+.titulo {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+/*NUESTROS SERVICIOS*/
+.subtitulo {
+    font-weight: 300;
+    text-align: center;
+    color: #9f8ad0;
+    margin-bottom: 40px;
+    font-size: 40px;
+
+}
+
+.contenedor-servicio {
+    /*contenedor padre para aplicar flex*/
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.contenedor-servicio img {
+    /*  contenedor 1*/
+    width: 40%;
+}
+
+.checklist-service {
+    /*  contenedor 2*/
+    width: 48%;
+}
+
+.service {
+    margin-bottom: 20px;
+}
+
+.n-service {
+    margin-bottom: 7px;
+    color: #9f8ad0;
+}
+
+.number {
+    display: inline-block;
+    /*lo convierto a inline block para darle un widht y un hiegth*/
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    /*centra verticalmente*/
+    margin-right: 5px;
+}
+
+/*galeria*/
+.galeria {
+    background: #f2f2f2;
+}
+
+.contenedor-galeria {
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.img-galeria {
+    width: 30%;
+    display: block;
+    /*para que sea como bloques*/
+    margin-bottom: 15px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+
+}
+
+/*cuando le declik a la imagen , me sobresalga otra imagen*/
+.imagen-light {
+    position: fixed;
+    /*que se fije la pagina*/
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0;
+    /*para centrar */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /*transicion para la imagen*/
+    transform: translate(100%);
+    /* translate sirve para moverlo en el eje xy y pero en este caso lo ocultara el fondo sobrepuesto*/
+    transition: transform .2s ease-in-out;
+
+}
+
+.show {
+    transform: translate(0);
+    /*para mostrar la imagen que se habia ocultado*/
+}
+
+.agregar-imagen {
+    /*para la imagen*/
+    width: 60%;
+    margin-top: 80px;
+    height: 500px;
+    border-radius: 20px;
+
+    /*agregar la imagen sobrepuesta*/
+    transform: scale(0);
+    /*para el zoom tamaño normal, poner en 1 para activarlo*/
+    transition: transform, 3s, .2s;
+    /*duracion de la transiicion, el retraso(2s)*/
+    object-fit: cover;
+}
+
+/*clase extra, cuando le demos clicl ala imagen se agrega otra image*/
+.showImage {
+    transform: scale(1);
+    /*para darle mas zoom*/
+}
+
+.close {
+    /*es el icono X*/
+    position: absolute;
+    /*su padre de este es imagen-light tiene una position relative*/
+    top: 15px;
+    right: 15px;
+    z-index: 11;
+    width: 40px;
+    cursor: pointer;
+}
+
+/*Expertos*/
+.experts {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /*si no caben , que lo mande abajo*/
+
+}
+
+.cont-expert {
+    width: 20%;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.img-experts {
+    margin-top: 10px;
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+
+}
+
+.n-expert {
+    margin-top: 20px;
+    width: 100%;
+
+    display: inline-block;
+    font-weight: 400;
+}
+
+/*footer*/
+footer {
+    background-color: #9f8ad0;
+    padding-bottom: 0.1px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-wrap: wrap;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.contact-us {
+    width: 48%;
+    color: #fff;
+}
+
+.brand {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.brand+p {
+    /*significa el hermano adyacente*/
+    font-weight: 500;
+}
+
+.line {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background-color: #f2f2f2;
+    margin-bottom: 60px;
+}
+
+
+.social-media {
+    width: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.social-media-icon {
+    display: inline-block;
+    margin-left: 20px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+
+
+}
+
+.social-media-icon:hover {
+    background-color: #fff;
+    color: #9f8ad0;
+}
+
+.social-media-icon>i {
+    font-size: 30px;
+    line-height: 60px;
+    /*centra verticalmente*/
+}
+
+/*para dispositivo mobiles*/
+@media screen and (max-width:800px) {
+
+    /*quiero adaptarlo desde 800 hasta 500 */
+    .menu-navegacion {
+        width: 50vw;
+    }
+
+    .titulo {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .contenedor-servicio img {
+        /*  contenedor 1*/
+        width: 80%;
+    }
+
+    .checklist-service {
+        /*  contenedor 2*/
+        width: 80%;
+    }
+
+    /*es para editar la imagen, la imagen superpuesta*/
+    .agregar-imagen {
+        margin-top: 160px;
+        width: 80%;
+    }
+
+    .img-galeria {
+        width: 45%;
+    }
+
+    .cont-expert {
+        width: 80%;
+    }
+
+    .footer-content {
+        
+        justify-content: center;
+        text-align: center;
+       
+        
+    }
+    .social-media{
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .contact-us{
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+
+
+}
+/*Para los dispositivos mobiles para de 500 a 300 pixeles*/
+@media screen and (max-width:500px) {
+    .menu-navegacion {
+        width: 65vw;
+    }
+    .agregar-imagen {
+        margin-top: 160px;
+        width: 95%;
+    }
+    .titulo {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .hamburguesa{
+        top: 20px;
+        right: 20px;
+    }
+    .img-galeria {
+        width: 95%;
+    }
+}

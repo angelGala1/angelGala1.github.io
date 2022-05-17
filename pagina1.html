@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- esto es para usar boxIcons -- codigo Css -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="pagina1cs.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header" id="inicio">
+        <img src="img/hamburguesa.png" class="hamburguesa" alt="">
+        <nav class="menu-navegacion ">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicio">Servicio</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#experto">Expertos</a>
+            <a href="#contacto">Contactos</a>
+        </nav>
+        <div class="contenedor head">
+            <h1 class="titulo">Mantenimientos de Computadoras</h1>
+            <p> Los mejores tecnicos para la solucion de problemas0</p>
+        </div>
+    </header>
+    <main class="main">
+        <section class="contenedor" id="servicio">
+            <h2 class="subtitulo">Nuestros Servicios</h2>
+            <div class="contenedor-servicio">
+                <img src="img/a.png" alt="">
+                <div class="checklist-service">
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">1</span>Diseño Web</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem modi magni
+                            quaerat! Enim, cupiditate praesentium deserunt error veritatis molestiae.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">2</span>Diseño Web</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem modi magni
+                            quaerat! Enim, cupiditate praesentium deserunt error veritatis molestiae.</p>
+                    </div>
+                    <div class="service">
+                        <h3 class="n-service"><span class="number">3</span>Diseño Web</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga exercitationem modi magni
+                            quaerat! Enim, cupiditate praesentium deserunt error veritatis molestiae.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="gallery" id="portafolio">
+            <h2 class="subtitulo">Galeria</h2>
+            <div class="contenedor-galeria">
+                <img src="img/1.jpg" alt="" class="img-galeria">
+                <img src="img/2.jpg" alt="" class="img-galeria">
+                <img src="img/3.jpg" alt="" class="img-galeria">
+                <img src="img/4.jpg" alt="" class="img-galeria">
+                <img src="img/5.jpg" alt="" class="img-galeria">
+                <img src="img/6.jpg" alt="" class="img-galeria">
+            </div>
+        </section>
+         <section class="imagen-light"> <!-- Esto es para javaScript, cuando le de clik me mostrara la imagen -->
+            <img   src="img/close.png" alt="" class="close">
+            <img src="img/fondo.jpg" alt="" class="agregar-imagen">
+        </section>
+
+        <section class="contenedor" id="experto">
+            <h2 class="subtitulo">Expertos en:</h2>
+            <section class="experts">
+                <div class="cont-expert">
+                    <img src="img/b.png"  class="img-experts"alt="">
+                    <h3 class="n-expert"> Anayltics</h3>
+                </div>
+
+                <div class="cont-expert">
+                    <img src="img/c.png"  class="img-experts"alt="">
+                    <h3 class="n-expert"> Seo</h3>
+                </div>
+
+                <div class="cont-expert">
+                    <img src="img/d.png"  class="img-experts"alt="">
+                    <h3 class="n-expert"> Security</h3>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer id="contacto">
+        <div class="contenedor footer-content">
+            <div class="contact-us">
+                <h2 class="brand">Angel Gala</h2>
+                <p>Somos expertos en la creacion de tus sueños</p>
+            </div>
+            <div class="social-media">
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-facebook'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-instagram'></i>
+                </a>
+                <a href="./" class="social-media-icon">
+                    <i class='bx bxl-twitter'></i>
+                </a>
+            </div>
+        </div>
+        <div class="line"></div>
+    </footer>
+
+
+    
+    
+<script src="menu.js"></script>
+<script src="lightbox.js"></script>
+</body>
+
+</html>
